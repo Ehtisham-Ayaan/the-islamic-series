@@ -2,43 +2,19 @@ import './css/App.css';
 import {makeStyles} from "@material-ui/core/styles";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import front from './img/front.jpg';
 
-import home1 from "./img/home1-removebg-preview (2).png";
 
-import home2 from "./img/home2-removebg-preview (2).png";
+import React from 'react';
 
-import home3 from "./img/home3-removebg.png";
-// import home4 from "./img/home4.jpg";
-// import home4 from "./img/home4-removebg.png";
-// import home4 from "./img/home4-removebg-preview.png";
+import {Link} from "react-router-dom";
 
-import home4 from "./img/home44.png";
-
-import home5 from "./img/home5.png";
-import coffee from "./img/coffee.jpg"
-import lightening from "./img/lightening.png";
-
-import React, { useEffect } from 'react';
-// import { Spin } from 'antd';
-// import { check } from 'antd';
-// import 'antd/dist/antd.css';
-
-import {Button, IconButton} from "@material-ui/core";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-// import MyEstimates from "./sketch";
 import logo from "./img/logoA.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Typography from "@material-ui/core/Typography";
-// import { FaBeer } from 'react-icons/fa';
-import { LogoNodejs } from 'react-ionicons'
-import { Heart } from 'react-ionicons'  
-import { Close } from 'react-ionicons'  
 
-import { toast } from "react-toastify";
 
 import mySketch from "./img/krulus-osman.jpg"
 import ertugral from "./img/ertugral.png"

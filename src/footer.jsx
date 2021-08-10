@@ -1,5 +1,5 @@
-import {makeStyles} from "@material-ui/core/styles";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+
+import { Link} from "react-router-dom";
 
 import './css/footer.css'
 import './css/Button.css'
