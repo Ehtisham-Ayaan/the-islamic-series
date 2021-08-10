@@ -1,13 +1,10 @@
-import { Typography } from '@material-ui/core';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import about from '../img/about.jpg'
+
 import {makeStyles} from "@material-ui/core/styles";
-import home1 from '../img/home1.png'
-import about111 from '../img/about111.jpeg'
-import about222 from '../img/about222.jpg'
+
 import { useState, useEffect } from 'react';
-import { Icon } from '@iconify/react'
-import locationIcon from '@iconify/icons-mdi/map-marker'
+
 
 const useStyles = makeStyles((theme) => ({
  
@@ -76,11 +73,11 @@ useEffect(() => {
         <div className="col-md-6">
         <h3 className={myClass.h}>Episode 18 Part 1</h3>
 
-        <iframe width="560" height="315" src="//ok.ru/videoembed/1687372434171" frameborder="0" allow="autoplay" allowfullscreen = "true"></iframe>
+        <iframe title = "u1" width="560" height="315" src="//ok.ru/videoembed/1687372434171" frameborder="0" allow="autoplay" allowfullscreen = "true"></iframe>
         </div><div className="col-md-6">
         <h3 className={myClass.h}>Episode 18 Part 2</h3>
 
-        <iframe width="560" height="315" src="//ok.ru/videoembed/1688573905659" frameborder="0" allow="autoplay" allowfullscreen = "true"></iframe>
+        <iframe title="u1" width="560" height="315" src="//ok.ru/videoembed/1688573905659" frameborder="0" allow="autoplay" allowfullscreen = "true"></iframe>
         </div>
         
         </div>

@@ -1,12 +1,10 @@
-import { Typography } from '@material-ui/core';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 
-import about from './img/about.jpg'
+
 import {makeStyles} from "@material-ui/core/styles";
-import home1 from './img/home1.png'
-import about111 from './img/about111.jpeg'
-import about222 from './img/about222.jpg'
+
 import { useState, useEffect } from 'react';
 import osmanI from "./img/ertugral.png"
 

@@ -1,7 +1,7 @@
 
 import { useHistory } from 'react-router'
 import './css/App.css';
-import { Button, withStyles } from "@material-ui/core";
+import {  withStyles } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Badge from "@material-ui/core/Badge";
 import IconButton from "@material-ui/core/IconButton";
