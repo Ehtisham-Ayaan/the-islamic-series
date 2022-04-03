@@ -1,20 +1,28 @@
-import "./css/App.css";
-import { makeStyles } from "@material-ui/core/styles";
-import front from "./img/front.jpg";
-
 import React from "react";
-
-import { Link } from "react-router-dom";
-
+import { makeStyles } from "@material-ui/core/styles";
 import logo from "./img/logoA.png";
+import ramadan from "./img/Ramadan-1.jpg";
+import ramadan2 from "./img/Ramadan-2.jpg";
+import quran from "./img/Quran1200.jpg";
+import { Link } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
+import { Card, Button } from "react-bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const useStyles = makeStyles((theme) => ({
+  body: {
+    width: "90%",
+    marginLeft: "3%",
+  },
   p: {
     overflow: "visible",
     letterSpacing: 0.5,
     color: "#433E69",
-    fontSize: "20px",
+    fontSize: "14px",
     fontWeight: 700,
     fontStyle: "italic",
     fontFamily: `"Inter-ExtraBoldItalic", "Inter", sans-serif`,
@@ -48,28 +56,27 @@ const useStyles = makeStyles((theme) => ({
   },
 
   liText: {
+    marginLeft: "3%",
     width: "100%",
     height: "auto",
     overflow: "visible",
-    color: "white",
+    color: "#3D0000",
     textAlign: "left",
     lineHeight: "2.3",
     fontWeight: "700",
     fontStyle: "italic",
     fontFamily: "Inter-Bold" || "Inter" || "sans-serif",
-    fontSize: "14.3px",
+    fontSize: "24.3px",
     letterSpacing: "0px",
   },
 
   myStyle: {
-    position: "absolute",
-    top: "20%",
-    left: "35%",
+    marginLeft: "3%",
     transform: "translate('-50%' , -'50%' )",
-    width: "30%",
+    width: "10%",
     height: "auto",
   },
-  media: {
+  imgStyle: {
     height: 200,
   },
   paper: {
@@ -92,22 +99,58 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Home() {
-  const width = "100%";
+  const width = document.innerWidth;
   const height = "auto";
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const myClass = useStyles();
 
   return (
     <div style={{ overflow: "hidden" }}>
-      <img
-        width={width}
-        height={height}
-        src={front}
-        alt="image"
-        style={{ opacity: 0.8, borderBottomRightRadius: "20%" }}
-      />
-
       <img src={logo} className={myClass.myStyle} />
+      <Carousel>
+        <div>
+          <img
+            width={width}
+            height={height}
+            src={ramadan2}
+            alt="image"
+            style={{ opacity: 0.8, borderBottomRightRadius: "20%" }}
+          />
+          <p className="legend">Ramadan Mubarak</p>
+        </div>
+        <div>
+          <img
+            width={width}
+            height={height}
+            src={ramadan}
+            alt="image"
+            style={{ opacity: 0.8, borderBottomRightRadius: "20%" }}
+          />
+          <p className="legend">Ramadan Mubarak</p>
+        </div>
+      </Carousel>
+      <div>
+        <h3 className={myClass.liText}>Services</h3>
+        <div data-aos="fade-up-right">
+          <Card style={{ width: "18rem" }} className={myClass.liText}>
+            <Card.Img variant="top" src={quran} />
+            <Card.Body>
+              <Card.Title>Quran Tutor</Card.Title>
+              <Card.Text className={myClass.p}>
+                We are Offering a group of Quran Tutors for children to learn
+                How to recite Holy Quran?
+              </Card.Text>
+              <Button variant="primary">
+                Visit Tutors <i class="fa-solid fa-arrow-right"></i>
+              </Button>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }
