@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import {
   BrowserRouter as Router,
-  Redirect,
+  // Redirect,
   Route,
   Switch,
 } from "react-router-dom";

@@ -129,7 +129,7 @@ export default function TopMenu() {
         {" "}
         <Typography variant="h6">
           <Link to="/" className={classes.link} style={{ color: "black" }}>
-            Home
+            Trending
           </Link>
         </Typography>
       </MenuItem>
@@ -267,6 +267,7 @@ export default function TopMenu() {
         position="static"
         style={{
           backgroundColor: "#232F3E",
+          opacity: 0.9,
           textAlign: "center",
           justifyContent: "center",
         }}
@@ -279,7 +280,7 @@ export default function TopMenu() {
           <div className={classes.sectionDesktop}>
             <Typography variant="h6">
               <Link to="/" className={classes.link}>
-                Home
+                Trending
               </Link>
             </Typography>
 

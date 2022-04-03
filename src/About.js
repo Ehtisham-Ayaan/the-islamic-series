@@ -49,14 +49,14 @@ export default function About() {
   );
   const [fontSize, setFontSize] = useState(25);
   const [setWidthh] = useState(750);
-  useEffect(() => {
-    setWindowDimensions(getWindowDimensions());
+  // useEffect(() => {
+  //   setWindowDimensions(getWindowDimensions());
 
-    if (windowDimensions < 1024) {
-      setFontSize(12);
-      setWidthh(280);
-    }
-  });
+  //   if (windowDimensions < 1024) {
+  //     setFontSize(12);
+  //     setWidthh(280);
+  //   }
+  // });
 
   const myClass = useStyles();
 
@@ -68,6 +68,7 @@ export default function About() {
             src={about}
             width="100%"
             height="auto"
+            alt="about-img"
             style={{ marginTop: "10%" }}
           />
         </div>
