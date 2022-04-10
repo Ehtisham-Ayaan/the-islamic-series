@@ -97,10 +97,8 @@ export default function About() {
                   className={myClass.text}
                   style={{ fontSize: fontSize, marginLeft: "12%" }}
                 >
-                  Designed By: Rabbani Solutions <br />
-                  Feel Free to Contact Us <br />
-                  erwattoo@gmail.com for <br />
-                  any suggestions or Query <br />{" "}
+                  Designed By: Rabbani Solutions Feel Free to Contact Us
+                  erwattoo@gmail.com for any suggestions or Query{" "}
                 </Typography>
               </div>
             </div>
