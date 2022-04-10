@@ -78,12 +78,12 @@ export default function About() {
           <h4 className={myClass.h}>Who We Are</h4>
           <Typography className={myClass.text}>
             We are new in Software Industry and Build this app for the Users who
-            feel problem while watch their favourite Series. As I noticed that
-            some of the episodes are blocked or have bad Quality, We having
-            Implemented our Best Scrappers which which will fetch out best
-            quality servers for you in no time. If some Video wishes you to wait
-            for playing it is therefore because our bots try their best to
-            provide you Best Quality.
+            feel problem while Taughting Holy Quran to their children. As I
+            noticed that some of the people are getting very bad experience and
+            not getting a true environment for their children, We brought up
+            this plateform. We are practicing huge amount of hard work to bring
+            you quality work, therefore, be patience and tell us if you feel any
+            sort of inconvenience.
           </Typography>
         </div>
       </div>
