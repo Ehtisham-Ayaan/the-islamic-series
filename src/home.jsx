@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import { Card, Button } from "react-bootstrap";
 import AOS from "aos";
+import ReactAudioPlayer from "react-audio-player";
+import namesofAllah from "./assets/99.ogg";
 import "aos/dist/aos.css";
 import "./css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -56,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   liText: {
-    marginLeft: "3%",
+    marginLeft: "4%",
     width: "100%",
     height: "auto",
     overflow: "visible",
@@ -68,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Inter-Bold" || "Inter" || "sans-serif",
     fontSize: "24.3px",
     letterSpacing: "0px",
+    display: "inline-block",
   },
 
   myStyle: {
@@ -75,6 +78,10 @@ const useStyles = makeStyles((theme) => ({
     transform: "translate('-50%' , -'50%' )",
     width: "10%",
     height: "auto",
+  },
+  myRadio: {
+    float: "right",
+    marginTop: "2%",
   },
   imgStyle: {
     height: 200,
@@ -84,6 +91,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+  },
+  link: {
+    color: "white",
+    paddingRight: "1rem",
+
+    textDecoration: "none",
+    marginTop: ".5rem",
+    fontFamily: "ubuntu",
   },
   avatar: {
     margin: theme.spacing(1),
@@ -110,7 +125,16 @@ function Home() {
 
   return (
     <div style={{ overflow: "hidden" }}>
-      <img src={logo} className={myClass.myStyle} />
+      <div>
+        <img src={logo} className={myClass.myStyle} />
+        <ReactAudioPlayer
+          src={namesofAllah}
+          autoPlay
+          controls
+          loop
+          className={myClass.myRadio}
+        />
+      </div>
       <Carousel>
         <div>
           <img
@@ -144,8 +168,56 @@ function Home() {
                 We are Offering a group of Quran Tutors for children to learn
                 How to recite Holy Quran?
               </Card.Text>
-              <Button variant="primary">
+              <Button variant="danger">
                 Visit Tutors <i class="fa-solid fa-arrow-right"></i>
+              </Button>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: "18rem" }} className={myClass.liText}>
+            <Card.Img variant="top" src={quran} />
+            <Card.Body>
+              <Card.Title>Recite Quran</Card.Title>
+              <Card.Text className={myClass.p}>
+                This is the month of Quran. So why not Quran? Just press button
+                below to recite Holy Quran
+              </Card.Text>
+              <Button variant="danger">
+                <Link
+                  to={{ pathname: "https://quran.com" }}
+                  target="_blank"
+                  className={myClass.link}
+                >
+                  Recite <i class="fa-solid fa-arrow-right"></i>
+                </Link>
+              </Button>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: "18rem" }} className={myClass.liText}>
+            <Card.Img variant="top" src={quran} />
+            <Card.Body>
+              <Card.Title>Quran Tutor</Card.Title>
+              <Card.Text className={myClass.p}>
+                We are Offering a group of Quran Tutors for children to learn
+                How to recite Holy Quran?
+              </Card.Text>
+              <Button variant="danger">
+                Visit Tutors <i class="fa-solid fa-arrow-right"></i>
+              </Button>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: "18rem" }} className={myClass.liText}>
+            <Card.Img variant="top" src={quran} />
+            <Card.Body>
+              <Card.Title>Khutba</Card.Title>
+              <Card.Text className={myClass.p}>
+                Are you willing to listen khutba jumma tul Mubarak from Hafiz
+                Abdul Hanan or others why not?
+              </Card.Text>
+              <Button variant="danger">
+                Listen Khutba <i class="fa-solid fa-arrow-right"></i>
               </Button>
             </Card.Body>
           </Card>
